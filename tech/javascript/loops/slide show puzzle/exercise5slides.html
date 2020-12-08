@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--5 images then create 2 buttons & call plusDivs() on each
+Pass -1 for the back button and pass+1 for the forward button-->
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+    Body{
+      background-color: #993300}
+    img{
+      width: 601px;
+      height: 426px;
+      border-width: 20px;
+      border: solid #800000}
+
+    </style>
+
+    <meta charset="utf-8">
+    <title> Why is it weard </title>
+  </head>
+  <body>
+    <img id= 'img' alt="img"
+    src="img/img1.png">
+
+    <button onclick="plusDivs( -1 ) "> Back </button>
+    <button onclick="plusDivs( 1 ) "> Forward </button>
+
+    <script>
+      index =0;
+      function plusDivs(x){
+
+        var images = ["IMG_2440.JPG", "IMG_2445.JPG", "IMG_2512.JPG", "IMG_2503.JPG", "IMG_2444.JPG"]
+        if ( x > 0) {
+          if(index < 4){
+          index++;
+        }
+        else {
+          index = 0;
+        }
+      }
+        if (x < 0){
+          if(index>0) {
+          index--;
+        }
+        else{
+          index = 4;
+
+        }
+        }
+document.getElementById('img').src = images[index];
+console.log(index);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>week1 day3 ml bloombox</title>
+
+
+
+<div id= "main">
+
+  <div class="topleft"></div>
+  <div class="topright"></div>
+  <div class="bottomleft"></div>
+  <div class="bottomright"></div>
+</div>
+
+</head>
+
+  <style>
+
+
+div#main {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+}
+
+div#main .topleft {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height:100px;
+  top: 0px;
+  left: 0px;
+  background: #ff3300;
+  transform-origin: center;
+  transform: translate(-100%, 50%) rotate (45deg);
+}
+div#main .topright {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height:100px;
+  top: 0px;
+  left: 100px;
+  background: #cc6600;
+  transform-origin: center;
+}
+div#main .bottomleft {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 0px;
+  background: #ff9933;
+  transform-origin: center;
+}
+div#main .bottomright {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height:100px;
+  top: 100px;
+  left: 100px;
+  background: #ff6600;
+  transform-origin: center;
+}
+div#main: hover .topleft{
+
+}
+div#main: hover .topright{
+}
+div#main: hover .bottomleft{
+}
+div#main: hover .bottomright{
+}
+
+
+
+
+</style>
+</html>

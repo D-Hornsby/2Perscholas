@@ -1,0 +1,25 @@
+<img id= 'img' alt="img" src="IMG_2440.JPG">
+  <button onclick="plusDivs(-1) "> Back </button>
+  <button onclick="plusDivs(1) "> Forward </button>
+  <script>
+    index =0;
+    function plusDivs(x){
+      var images = ["IMG_2440.JPG"]
+      if (x>0){  //is x = 1 && is index<4
+        if (index<4){
+          index++;
+        }else {
+          index=0;
+        }
+      }
+      if (x<0){  //is x = -1 && is index>0
+        if (index>0) {
+          index--;
+        }else {
+          index=4;
+        }
+    }
+    document.getElementById('img').src = images[index];
+    console.log(index);
+  }
+  </script>
