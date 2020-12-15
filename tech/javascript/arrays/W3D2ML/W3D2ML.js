@@ -36,12 +36,74 @@ var waitList = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Pik
     //if(waitList [i] == waitList)
     console.log("nowServing" + waitList);
   }
+
+
+  // solution 1 ------------------------------------------
+var waitList = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Piko Taro" ];
+var nowServing = "";
+for (var i = 0; i < waitList.length; i++) {
+
+      nowServing = waitList[i];
+      console.log("Now serving =  " + nowServing);
+
+
+// solutiion 2 ------------------------------------------
+var waitList = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Piko Taro" ];
+var nowServing = "";
+waitList = waitList.reverse();
+for (var i = 0; i < 5; i++) {
+           nowServing = waitList.pop();
+           console.log(nowServing);
+           console.log(waitList);
+}
+
+console.log("done");
+
+//  solution 3 -----------------------------------------
+
+var waitList = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Piko Taro" ];
+var nowServing = "";
+
+for (var i = 0; i < 5; i++) {
+
+     nowServing = waitList.shift(); //removes first elements of array
+     console.log(nowServing); //in for loop each time will print person who is nowServing
+     console.log(waitList);  //remaining waitlist will print without person who is serving. length-1;
+
+}
+console.log("Waiting List is Empty");
+
+//
 */
 
 //im not sure whats happend. now even codes that worked up top nolonger work. i just get a number
+/*
 var shoe = ["just", "do", "it"];
 var shoeString = "";
   for (var i = 0; i <shoe.length; i++){
     shoeString += shoe[i];
     shoeString += "";
   }
+*/
+  //atempt 2
+var shoe = ["just", "do", "it"];
+var shoeString  = shoe.toString();
+
+  console.log(shoeString);
+
+  /*
+  internal/modules/cjs/loader.js:883
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/denahornsby/Desktop/2Perscholas/W3D2ML.js'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js
+:72:12)
+    at internal/main/run_main_module.js:17:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+*/
+//Ugggg why
