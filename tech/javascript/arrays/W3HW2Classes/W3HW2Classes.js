@@ -36,33 +36,7 @@ console.log(circle1);
 //Write a function called rectangle_area that returns the area of the given object.
 //Write a function total_sides that returns the number of sides of the object.
 //create class with attributes and instantiate
-class Rectangle {
-  constructor( height,width) {
-    this.height = height;
-    this.width = width;
-  }//call circle_area
-  get area(){
-    return this.calcArea();
-  }
-  calcArea(){
-    return this.height*this.width;
-  }
 
-  numberOfsides(sides){
-           this.sides = sides;
-  }
-}
-var rectangle = new Rectangle(10 ,20)
-console.log("Area of rectangle = " +rectangle.area);
-rectangle.numberOfsides(4);
-console.log(rectangle);
-
-var rectangle1 = new Rectangle (5, 110)
-console.log('Area of Rectangle1 = '+ rectangle1.area);
-rectangle1.numberOfsides(4);
-console.log(rectangle1);
-
-/**** we do this way as well instead of using get ****?*/
 
 class Rectangle{
   constructor(length,width){
