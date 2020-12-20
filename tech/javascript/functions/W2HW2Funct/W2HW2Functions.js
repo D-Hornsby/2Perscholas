@@ -1,33 +1,34 @@
 //1. find the greater of the 2 numbers
 
-//function max(a, b) {
- //  if (a > b) { 
-//    return a;  
-//   }
-//    else {  
-//      return b; 
-//    } 
-//  }   
+function max(a, b) {
+  if (a > b) { 
+    return a;
+   }
+    else {  
+      return b; 
+    } 
+   }   
 
-//  console.log (max ( 2, 4 ));   //call the larger number
+  console.log (max ( 2, 4 ));   //call the larger number
 
+//not returning a number
 
   //2.find the greater of 3 numbers
-
-//  function max (a, b, c) {
- //  if ((a > b) && (a > c)){ 
-//      return a;  
-//     }
-//      else if ((b > a) && (b > c)){
-//        return b; 
-//      } 
-//      else {
-//        return c;
-//      }
-//    }   
-    //return larger
-//    console.log (max (2, 4, 8));   //call the larger number
-
+/*
+  function max (a, b, c) {
+   if ((a > b) && (a > c)){ 
+      return a;  
+     }
+      else if ((b > a) && (b > c)){
+        return b; 
+      } 
+     else {
+        return c;
+      }
+    }   
+//    return larger
+    console.log (max (2, 4, 8));   //call the larger number
+*/
 
     //3. is it a vowel
 //    function vawelOrNo (x){
@@ -151,7 +152,7 @@ function findLongestWord(arr){
 */
 
 //8.
-function filterLongWords (arr, num){
+/*function filterLongWords (arr, num){
   newArr = [];
   for (var i=0; i< arr.length; i++){
     if (arr[i].length>num){
@@ -160,7 +161,7 @@ function filterLongWords (arr, num){
   }
   return newArr;
 }
-
+*/
 
 ///still need to do bonus
 //not liking doing the code this way. seen them do it in class but i like so each has its own file.

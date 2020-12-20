@@ -1,8 +1,8 @@
 
-
-window.addEventListener('DOMContentLoaded',
-documentLoaded, false);
-
+console.log("boo");
+/*window.addEventListener('DOMContentLoaded',
+documentLoaded, false);*/
+documentLoaded();
     var startTime;
     var limite;
     var tempor;
@@ -10,10 +10,10 @@ documentLoaded, false);
   function documentLoaded(){
     "use strict";
 
+console.log("document");
     document.getElementById("clock").addEventListener(
       "click", Clicked);
 
-      console.log("Document");
   }
   function Clicked(evt){
     "use strict";
@@ -65,3 +65,4 @@ minutes + ":" + seconds;
     document.getElementById("clock").className = "blue";
 
   }
+}
