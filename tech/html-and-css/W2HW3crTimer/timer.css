@@ -1,48 +1,43 @@
 
 
-
-
- #clock {
-
-  background-color: blue;
+.blue {
+  background-color: #0781D4;
   height: 300px;
   width: 300px;
   border-radius: 50%;
   box-shadow: 3px 7px gray;
-/*center clock text*/
+  font-size: 15px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-
-
-
-  /*-wevkit-clip-path: ploygon (7% 0, 100% 0, 93% 100%, 0% 100%);
-  clip-path: ploygon(7% 0, 100% 0, 93% 100%, 0% 100%);
-*/
-
-
-.blue #txtTempo {
-  position: absolute;
-  box-sizing: border-box;
-  left: 100px;
-  top: 140px;
-  font-size: 50px;
-  background-color: #0781D4;
-  border: none
-  padding: 0;
-  margin:0;
-}
-
 
 .red {
+  background-color: red;
   height: 300px;
   width: 300px;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  line-height: 300px;
-  background-color: red;
   border-radius: 50%;
+  box-shadow: 3px 7px gray;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Styles the input box */
+/*txtTempo is for the input box and the min box*/
+#txtTempo {
+  line-height: 100px;
+  font: 30px Georgia;
+  background-color:#85C1E9;
   text-align: center;
-  font-size: 50px;
+}
+/*this styles the seconds box*/
+#txtTempo1 {
+  line-height: 100px;
+  font: 30px Georgia;
+  background-color:#85C1E9;
+  text-align: center;
+}

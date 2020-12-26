@@ -5,49 +5,40 @@
 
     <title>timer</title>
 
-    <link href="timer.css"
-          rel="stylesheet">
+    <link href="timer.css"rel="stylesheet">
+
+     <script src="timer.js"></script>
 
   </head>
   <body>
 
-    <div id="container">
+    <div id="controlos">
+      <input id="txtTempo"
+      type="text"
+      value="10"
+      size="4"
+      maxlength="4">
+      <button id="btnStart">Start</button>
+    </div>
 
-      <div class="controls-wrapper">
-          <button id="Start">Start</button>
-        </div>
+    <div id="clock" class="blue">
+      <!--im adding this for 5 with help but my clock dont work from 4 -->
+      <input id="txtTempo"
+      value="00"
+      size="3"
+      onclick="startTimer">:
+
+      <input id="txtTempo1"
+      value="00"
+      size="3"
+      onclick="startTimer">
 
 
-      <div id="clock">
-          <span>00:00<span>
-      </div>
+    </div>
 
 
-      </div>
 
-<!--
-    <script> //I had this hid and it just made no difference
 
-    let seconds= 3;
-
-    document.getElementById ("para").innerHTML =
-      '${Math.floor(seconds / 60)};${seconds % 60 < 10 ? 0:""}${seconds % 60}';
-
-    //seconds;
-
-    setInterval(() => {
-      if(seconds<= 0){
-      document.getElementById("para").innerHTML
-      ='${Math.floor(seconde / 60)}
-
-      :${seconds % 60 < 10 ? 0 :
-      ""}${seconds % 60}';
-      seconds;
-    },1000);
-}
--->
-
-   <script src="timer.js" async defer></script>
 
 
 
