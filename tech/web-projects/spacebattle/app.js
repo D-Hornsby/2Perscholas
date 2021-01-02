@@ -29,7 +29,7 @@ var ussSchwarz = {
                 console.log('Direct hit Captain!');
 
                 alienShips.hull = alienShips.hull - ussSchwarz.firepower;
-                console.log('Alien has ${enemy.hull} hull points remaining.');
+                console.log(`Alien has ${alienShips.hull} hull points remaining.`);
 
             if (alienShips.hull <= 0) {
                 ussSchwarz.victories += 1;
@@ -66,7 +66,7 @@ var alienShips = {
                 console.log('Captain we are hit!');
 
                 ussSchwarz.hull = ussSchwarz.hull - alienShips.firepower;
-                console.log('Captain we have ${ussSchwarz.hull) hull points remaining.');
+                console.log(`Captain we have ${ussSchwarz.hull} hull points remaining.`);
                 
             if (ussSchwarz.hull <= 0) {
                 ussSchwarz.health = false;
