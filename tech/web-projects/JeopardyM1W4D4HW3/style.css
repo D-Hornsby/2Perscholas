@@ -1,0 +1,153 @@
+/*how can i display this at the footer with spacing between teams*/
+/* h1{
+  top: 0;
+    bottom: 0;
+    -webkit-box-flex: 1;
+            flex: 1;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    font-size: 3.5vw;
+    font-family: impact;
+    color: #ddd;
+    background: -webkit-gradient(linear, right bottom, left top, from(#000088), to(#0000ff));
+    background: linear-gradient(to top left, #000088, #0000ff);
+    border: 3px solid #000;
+
+} /*------next atempt */
+
+#teams {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  display:flex;
+}
+#teams .team{
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid white;
+  padding: 5px;
+  background-color: white;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+#teams .team:first-of-type{
+  margin-left: 50px;
+}
+#teams .team:last-of-type{
+  margin-right: 50px;
+}
+
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+
+  .board {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+            padding:5%;
+  }
+  .board .row {
+    -webkit-box-flex: 1;
+            flex: 1;
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+  .board .row .tile {
+    top: 0;
+    bottom: 0;
+    -webkit-box-flex: 1;
+            flex: 1;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    font-size: 3.5vw;
+    font-family: impact;
+    color: #ddd;
+    background: -webkit-gradient(linear, right bottom, left top, from(#000088), to(#0000ff));
+    background: linear-gradient(to top left, #000088, #0000ff);
+    border: 3px solid #000;
+  }
+  .board .row .question-value {
+    display: block;
+  }
+  .board .row .question-answer {
+    display: none;
+  }
+  .board .row .tile.active {
+    border-width: 0;
+    font-size: 10vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 5;
+  }
+  .board .row .tile.active .question-value {
+    display: none;
+  }
+  .board .row .tile.active .question-answer {
+    display: block;
+  }
+
+  /*this is scorecard css*/
+  
+/* h1{
+  top: 100;
+    bottom: 0;
+    -webkit-box-flex: 1;
+            flex: 1;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    font-size: 3.5vw;
+    font-family: impact;
+    color: #ddd;
+    background: -webkit-gradient(linear, right bottom, left top, from(#000088), to(#0000ff));
+    background: linear-gradient(to top left, #000088, #0000ff);
+    border: 3px solid #000;
+
+} 
+       */
+
+
+
+  /* body{
+      background: aquamarine;
+  } */
