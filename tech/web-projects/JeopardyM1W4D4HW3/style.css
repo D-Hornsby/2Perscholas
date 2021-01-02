@@ -1,5 +1,5 @@
 /*how can i display this at the footer with spacing between teams*/
-/* h1{
+ #teams{
   top: 0;
     bottom: 0;
     -webkit-box-flex: 1;
@@ -17,10 +17,11 @@
     background: -webkit-gradient(linear, right bottom, left top, from(#000088), to(#0000ff));
     background: linear-gradient(to top left, #000088, #0000ff);
     border: 3px solid #000;
+    padding: 1%;
 
 } /*------next atempt */
 
-#teams {
+/* #teams {
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -44,7 +45,7 @@
 }
 #teams .team:last-of-type{
   margin-right: 50px;
-}
+} */
 
 
 
@@ -66,7 +67,7 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
-            padding:5%;
+            padding:10%;
   }
   .board .row {
     -webkit-box-flex: 1;
