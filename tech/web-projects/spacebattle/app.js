@@ -1,5 +1,5 @@
 
-console.log('We are live.');
+console.log("%c Let the battle begin.", "background:green");
 
 //lets build our ship
 //Im chosing to make the ships an object over an array to more easly add items if i choose later
@@ -23,26 +23,26 @@ var ussSchwarz = {
     victories: 0,
 
     attack: (RandomAlien) => {
-        console.log("Attacking the Alien!")
+        console.log("%cAttack the Alien!", "background:black; color:green");
         let myAttack = Math.random();
         let firepower = ussSchwarz.firepower;
         let accuracy = ussSchwarz.accuracy;
-        console.log("my attack", myAttack);
-        console.log("this.accuracy", accuracy);
+        //console.log("my attack", myAttack);
+        //console.log("this.accuracy", accuracy);
             if (myAttack <= accuracy){
-                console.log('Direct hit Captain!');
+                console.log("%cDirect hit Captain!", "color:red; font-size: 17px");
 
                 RandomAlien.hull = RandomAlien.hull - firepower;
-                console.log(`Alien has ${RandomAlien.hull} hull points remaining.`);
+                console.log(`%cAlien has ${RandomAlien.hull} hull points remaining.`, "color:magenta;");
 
             if (RandomAlien.hull <= 0) {
                 ussSchwarz.victories += 1;
                 
                 RandomAlien.health = false;
-                console.log('Well done Captain, invaders distroyed!');    
+                console.log("%cWell done Captain, invaders  are distroyed!", "background:blue; color:white;");    
             }
         }else {
-                console.log('Attack failed!')
+                console.log("%cAttack failed!", "background:white; color:black;")
         }  
     }
 }
@@ -76,17 +76,17 @@ class  AlienShips {
         }   
         
         if (myAttack <= this.accuracy){
-                console.log('Captain we are hit!');
+                console.log("%cCaptain we are hit!", "background:red; font-weight:bold; font-style:italic; color:white;");
 
                 ussSchwarz.hull = ussSchwarz.hull - this.firepower;
-                console.log(`Captain we have ${ussSchwarz.hull} hull points remaining.`);
+                console.log(`%cCaptain we have ${ussSchwarz.hull} hull points remaining.`, "background:yellow; color:red");
                 
             if (ussSchwarz.hull <= 0) {
                 ussSchwarz.health = false;
-                console.log('Kaa-Boom...You Are Dead!');    
+                console.log("%cKaa-Boom...You Are Dead!", "color:red; background:black;");    
             }
         }else {
-                console.log('Attack failed!')
+                console.log("%cThey just missed us Captain!", "color:blue;")
         }  
     }
 }
@@ -111,9 +111,9 @@ const alien6 = new AlienShips('Tardis');
  
 
 let battle = (user, alien) =>{
-    console.log("inside battle!")
+    console.log("%c This is brutal, I should of had another cup of coffee!", "color:cyan;")
     while(user.health && alien.health){
-         console.log("inside while")
+         console.log("%c Will we make it out of this loop alive!?" ,"background:cyan; ")
         user.attack(alien);
         if (alien.health){
             alien.attack(user);
