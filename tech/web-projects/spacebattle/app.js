@@ -22,19 +22,23 @@ var ussSchwarz = {
     health: true, 
     victories: 0,
 
-    attack: (alienShips) => {
+    attack: (RandomAlien) => {
+        console.log("Attacking the Alien!")
         let myAttack = Math.random();
-        let firePower = ussSchwarz.firepower;
-            if (myAttack <= ussSchwarz.accuracy){
+        let firepower = ussSchwarz.firepower;
+        let accuracy = ussSchwarz.accuracy;
+        console.log("my attack", myAttack);
+        console.log("this.accuracy", accuracy);
+            if (myAttack <= accuracy){
                 console.log('Direct hit Captain!');
 
-                alienShips.hull = alienShips.hull - ussSchwarz.firepower;
-                console.log(`Alien has ${alienShips.hull} hull points remaining.`);
+                RandomAlien.hull = RandomAlien.hull - firepower;
+                console.log(`Alien has ${RandomAlien.hull} hull points remaining.`);
 
-            if (alienShips.hull <= 0) {
+            if (RandomAlien.hull <= 0) {
                 ussSchwarz.victories += 1;
-                //cl
-                alienShips.health = false;
+                
+                RandomAlien.health = false;
                 console.log('Well done Captain, invaders distroyed!');    
             }
         }else {
@@ -52,20 +56,29 @@ var ussSchwarz = {
 //VOID Math.ceil()rounds number up to next largest integer
 //lets try (Math.random()*(max - min + 1))<<0...
 //nop...Math.floor(Math.random()*(max-min +1))+min said to give a perfectly even distrubution for the roll
-var alienShips = {
-    hull: Math.floor(Math.random() * (6 - 3 + 1)) + 3,
-    firepower: Math.floor(Math.random() * (4 - 2 + 1)) + 2,
-    accuracy: Math.floor(Math.random() * (.8 - .6 + 1)) +.6, 
+class  AlienShips {
+    constructor(name){
+        this.name = name;
+        this.hull = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
+        this.firepower = Math.floor(Math.random() * (4 - 2 + 1)) + 2;
+        //this.accuracy = Math.floor(Math.random() * (.8 - .6 + 1)) +.6;
+        this.accuracy = Math.random() * (.8 - .6 + 1) +.6;
 
-    health: true, 
-
-    attack: (ussSchwarz) => {
+        this.health = true;
+    }
+    attack(ussSchwarz) {
         let myAttack = Math.random();
-        let firePower = alienShips.firepower;
-            if (myAttack <= alienShips.accuracy){
+        let firePower = name.firepower;
+        if (this.hull <= 0) {
+            randomizer();
+            newDiv(`A new alien ship ${RandomAlien.name}`);
+            return;
+        }   
+        
+        if (myAttack <= this.accuracy){
                 console.log('Captain we are hit!');
 
-                ussSchwarz.hull = ussSchwarz.hull - alienShips.firepower;
+                ussSchwarz.hull = ussSchwarz.hull - this.firepower;
                 console.log(`Captain we have ${ussSchwarz.hull} hull points remaining.`);
                 
             if (ussSchwarz.hull <= 0) {
@@ -78,16 +91,42 @@ var alienShips = {
     }
 }
 
-let battle = (ussSchwarz, alienShips) =>{
-    while(ussSchwarz.health && alienShips.health){
-        ussSchwarz.attack(alienShips);
-        if (alienShips.health){
-            alienShips.attack(ussSchwarz);
+
+
+
+
+const alien1 = new AlienShips('Reapers');
+const alien2 = new AlienShips('Kal-El');
+const alien3 = new AlienShips('Resolute');
+const alien4 = new AlienShips('Hermes');
+const alien5 = new AlienShips('Icarus II');
+const alien6 = new AlienShips('Tardis');
+
+
+
+
+
+ const alienArray = [alien1, alien2, alien3, alien4, alien5, alien6];
+ let RandomAlien = alienArray
+ 
+
+let battle = (user, alien) =>{
+    console.log("inside battle!")
+    while(user.health && alien.health){
+         console.log("inside while")
+        user.attack(alien);
+        if (alien.health){
+            alien.attack(user);
         }
     }
 }
-
-battle(ussSchwarz,alienShips);
+while (alienArray.length > 0) {
+    let enemy = alienArray.pop();
+    battle (ussSchwarz, enemy);
+}
+//you need a loop here to pop and run the legenth of array
+// battle(ussSchwarz,);
+// for (alien1, alien2, alien3, alien4, alien5, alien6)
 
 
 
