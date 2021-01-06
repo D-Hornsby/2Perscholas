@@ -1,11 +1,11 @@
-//this is for the score cards
-console.log($);
+
 class Team {
     constructor(name, $el){
         this.name = name;
         this.score = 0;
         //lets assign the element to each Team instance
         this.$el = $el;
+        this.increaseBy = 100;
     }
     //what does the score board do?
     //it increases the score based on pointvalue
@@ -17,7 +17,6 @@ class Team {
      // the first child is the h1
      this.$el.children().eq(0).text(this.score);
     }
-
     decreaseScore(pointValue){
         this.score -= pointValue;
         this.$el.children().eq(0).text(this.score);
@@ -26,36 +25,31 @@ class Team {
         //select your 2nd child because thats your btn
         this.$el.children().eq(1).on('click', () => {
             //the pt value should be imported from another class
-            this.increaseScore(100)
-
+            this.increaseScore(this.increaseBy);
         })
         this.$el.children().eq(2).on('click', () => {
-            this.decreaseScore(100)
-
+            this.decreaseScore(this.increaseBy);
         })
         //remember to call these methods when you instantiate the class
         return this;
     }
-
 }
+
 $(()=>{
-    // const pointValue = 100;
-    
     const team1 = new Team('team1', $('#team1')).setup();
     const team2 = new Team('team2', $('#team2')).setup();
     const team3 = new Team('team3', $('#team3')).setup();
+
+
     console.log(team1.$el); //confirm the element is working
-
-
-})
-
-
-
-
-
-//this is the starter file
-$(()=>{
     const $tiles = $('.tile').on('click', (event)=>{
-      $(event.currentTarget).toggleClass('active')
+      $(event.currentTarget).toggleClass('active');
+      // this one line on 49 is some crazy Haben code
+      // console.log($(event.currentTarget).text().split(/\s+/)[1].slice(1));
+      const currentTileValue = Number($(event.currentTarget).text().split(/\s+/)[1].slice(1));
+      // step 2 change click handlers
+      team1.increaseBy = currentTileValue;
+      team2.increaseBy = currentTileValue;
+      team3.increaseBy = currentTileValue;
     })
 })
