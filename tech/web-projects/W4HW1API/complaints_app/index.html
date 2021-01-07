@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<link href="styles.css"rel="stylesheet">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- ok so the script below i got trying to fugure out how to call the api with my buttons so they will 
+    work onclick. i was trying something so not sure i will need line 10 and line 14 anymore -->
+
+      <script>
+     
+
+    </script>
+  
+
+</head>
+<body>
+  <br>
+  <h1>WHERE CAN WE CAUSE TROUBLE TODAY?</h1>
+  <br>
+
+  <!-- put input first or it breaks the css -->
+
+  
+
+  <div class="borough-request">
+        <input class= "text" placeholder="   # OF COMPLAINTS" type = "number">
+        
+        <!-- <button onclick ="clicked()">Brooklyn</button> to save-->
+        <button class="button" value= "brooklyn" onclick ="clicked()">BROOKLYN</button>
+        <button class="button" value= "manhattan" onclick ="clicked()">MANHATTAN</button>
+        <button class="button" value= "queens" onclick ="clicked()">QUEENS</button>
+        <button class="button" value= "bronx" onclick ="clicked()">BRONX</button>
+        <button class="button" value= "staten_island" onclick ="clicked()">STATEN ISLAND</button>
+        
+        <!-- oldsetup just incase
+        <button class="button" class= "btn btn-info">Staten Island</button> -->
+        
+  </div>
+
+  <div id="return">
+    <div id="brooklyn-return" class="return"></div>
+    <div id="manhattan-return" class="return"></div>
+    <div id="queens-return" class="return"></div>
+    <div id="bronx-return" class="return"></div>
+    <div id="statenisland-return" class="return"></div>
+  </div>
+
+
+  <form>
+    <ol></ol>
+  </form>
+
+  
+<!--testing note: window.open() may be blocked when not comming from a user
+  browere might think its a pop-up scam
+<script>
+function clicked() {
+  window.open('link stuff')
+}
+  const button = document.querySlectorAll('button');
+  button.forEach(button => button.click())
+</script>
+   -->
+    <script src="app.js"></script>
+    
+    </body>
+  </html>

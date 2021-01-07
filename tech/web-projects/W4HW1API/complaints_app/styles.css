@@ -1,0 +1,46 @@
+
+/* this is to style my heading */
+h1 {
+    text-align: center; 
+    font-weight: bold; 
+    font-style: serif;
+}
+/* this should work to change the button color during the clickbut not sure
+how to package it ..update :decided that it looks more like a hover feature on the 
+example but might want to try this code on something*/
+/* button[type='button']:active{
+        background-color:yellow;  */
+
+  /* this is working to center the input box and buttons       */
+ div {
+     text-align:center;    
+ }
+/* ---------------------------------------------------- */
+ /* this is not working to color the buttons and change color on hover */
+.button {
+    background-color: #000066;
+    color: white;  
+    border-radius: 7px;
+    /* line-height: 20px; */
+    padding:9px;
+}
+
+.text{
+    line-height: 20px;
+    padding:10px;
+}
+.button:hover {
+    background-color: rgb(221, 208, 27);
+    color: white;
+    transition-duration: 0.4s;
+    outline:5px;    /* tryed to cover the weard blue outline i have no idea where its comming from*/
+    outline-color: rgb(221, 208, 27);
+}
+/* ----------------------------------------------------- */
+
+/* this is an attempt to add the clicked to each button to open the api asigned to it */
+/* function clicked() {
+    window.open('link stuff')
+  }
+    const button = document.querySlectorAll('button');
+    button.forEach(button => button.click()) */
