@@ -1,0 +1,94 @@
+
+.sidebar{
+  background-color: rgb(50,57,69);
+  width: 200px;
+  height: 90vh;
+  grid-area: sidebar;
+  display:flex;
+  flex-direction: column;
+  justify-content: left; 
+  font-size: smaller;
+  color: rgb(114,121,136);
+  padding-left: 0;
+  
+} 
+
+
+
+.reviews {
+  grid-area: reviews;
+  color:rgb(114,121,136);
+  background-color: rgb(34,35,44);
+  padding-left: 10%;
+  
+}
+
+.averageRating {
+  grid-area: averageRating;
+  color: rgb(114,121,136);
+  background-color: rgb(34,35,44);
+  padding-left: 10%;
+  
+}
+
+.sentimentAnalysis {
+  grid-area: sentimentAnalysis;
+  color: rgb(114,121,136);
+  background-color: rgb(34,35,44);
+  padding-left: 10%;
+}
+
+.webVisitors {
+  grid-area: webVisitors;
+  color: rgb(114,121,136);
+  background-color: rgb(34,35,44);
+  padding-left: 10%;
+}
+
+
+
+ .container {
+  margin: 0 ;
+  padding: 50px;
+  font: Helvetica Neue;
+  background-color: rgb(50,57,69);
+  border:50px rgb(93,99,126);
+ }
+ 
+ body{
+   padding: 50;
+   background-color: rgb(70,76,103);
+ }
+
+
+
+.app {
+  padding: 10px;
+  display: grid;
+  grid-gap: 15px;
+  height: 90vh;
+  width: 90vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "sidebar reviews averageRating sentimentAnalysis" 
+  "sidebar webVisitors webVisitors webVisitors"; 
+  
+}
+
+/* @media only screen and (max-width: 600px) {
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-areas: 
+    "sidebar"
+    "reviews"
+    "averageRating"
+    "sentimentAnalysis" ;
+  }
+} */
+/* @media not|only mediatype and (mediafeature and|or|not mediafeature) {
+  CSS-Code;
+} */
+
+
