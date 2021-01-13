@@ -23,17 +23,25 @@ $(document).ready(function() {
         $.ajax({
             url: "https://data.cityofnewyork.us/resource/erm2-nwe9.json",
             type: "GET",
-            data: {
+            data:  {
             "$limit" : Number(userImput),
             agency: "NYPD",
             borough: borough,
+            resolution_description: "",
             }
             }).then(function(data) {
             alert("Retrieved " + data.length + " records from the dataset!");
             console.log(data);
-            //need the for loop
+            for (let index = 0; index <data.length: index++){
+                if (data[index].agency == "NYPD" && count < Number(userImput)count ++){
+                    console.log(arr[index])
+                }
+            }
             $("#return").append(data[0].descriptor)
             });
     })
 
 })
+console.log(data[index]);
+            
+//ok i have lots of errors and its 630 in the am...i need a nap 
