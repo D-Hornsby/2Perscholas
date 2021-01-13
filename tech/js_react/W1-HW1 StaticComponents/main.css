@@ -54,7 +54,7 @@
   background-color: rgb(50,57,69);
   border:50px rgb(93,99,126);
  }
- 
+  
  body{
    padding: 50;
    background-color: rgb(70,76,103);
@@ -76,17 +76,20 @@
   
 }
 
-/* @media only screen and (max-width: 600px) {
-  .container{
+@media only screen and (max-width: 600px) {
+  .app{
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
     grid-template-areas: 
     "sidebar"
     "reviews"
     "averageRating"
-    "sentimentAnalysis" ;
+    "sentimentAnalysis"
+    "webVisitors";
   }
-} */
+  
+}
 /* @media not|only mediatype and (mediafeature and|or|not mediafeature) {
   CSS-Code;
 } */
