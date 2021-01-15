@@ -55,6 +55,7 @@ class App extends React.Component {
                 value = {this.state.item} 
                 onChange= {this.handleChange}  
                 id= 'item' 
+                item= ''
 
                 />
 
