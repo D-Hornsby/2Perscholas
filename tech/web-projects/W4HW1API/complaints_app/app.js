@@ -1,47 +1,75 @@
+
+
 console.log("runing js")
-//parse the json_query result in an ansible loop and create some dynamic variables (or) use them in a task
-//use ansible inbuilt features like combine to create a ...
 
-
-//what Key-value pairs do we need
-//borough, descriptor(kind of complaint), agency(NYPD), resolution_description and later 
-//location: {type: "Point", cordinates: Array(2)}
-//return
-// agency: "NYPD"
-// borough: "Brooklyn"
-// descriptor:""
-// resolution_description: ""
-  
+// Main function works
 
 $(document).ready(function() {
     $(".button").on("click", (event)=>{
-        let userImput = $(".text").val()
-        if (userImput == "" ){
-            userImput = 10
+        let userInput = $('input[type="number"]').val();  
+     //   let userInput = $(".text").val()
+        if (userInput == "" ){
+            userInput = 10
             }
         let borough = event.target.value.toUpperCase()
         $.ajax({
             url: "https://data.cityofnewyork.us/resource/erm2-nwe9.json",
             type: "GET",
-            data:  {
-            "$limit" : Number(userImput),
+            data: {
+            "$limit" : Number(userInput),
             agency: "NYPD",
             borough: borough,
-            resolution_description: "",
             }
             }).then(function(data) {
             alert("Retrieved " + data.length + " records from the dataset!");
             console.log(data);
-            for (let index = 0; index <data.length: index++){
-                if (data[index].agency == "NYPD" && count < Number(userImput)count ++){
-                    console.log(arr[index])
+
+            //has number undefined so changed to line 9
+            //then input ..was a syntex error
+            //now count is not defined
+ //---------------------------------------- -------          
+            //need the for loop for the number of complants to print
+            for (let index = 0; index < data.length; index++) {
+                if (data[index].agency == 'NYPD' && count < Number(userInput)) {
+                  count++;
+//-------------------------------------------------
+// im trying to print the complants
+
+$('ol').append(`
+          <li>
+          <strong>Borough</strong><span id="borough">${data[index].borough
+            }
+          </span>
+          <br>
+
+          <strong>Descriptor</strong>:<span id="descriptor">${data[index].descriptor
+            }
+          </span>
+          <br>
+
+          <strong>Agency</strong>:<span id="agency">${data[index].agency
+            }
+            </span>
+             <br>
+          <div ><strong>Resolution description</strong>:<span><br><section>${data[index].resolution_description
+          }
+          </section></span></div>
+          <input type="submit" value="NYPD Response" onclick="response(${count.toString()})" class="btn btn-warning">
+          </li>
+
+          <hr>
+          `);
+
+            console.log(data[index]);
+//-------------------------------------------------
                 }
             }
-            $("#return").append(data[0].descriptor)
-            });
+        })
     })
+});
 
-})
-console.log(data[index]);
-            
-//ok i have lots of errors and its 630 in the am...i need a nap 
+//   $("#return").append(data[0].descriptor)
+              
+        
+//--------------------------------------------------
+

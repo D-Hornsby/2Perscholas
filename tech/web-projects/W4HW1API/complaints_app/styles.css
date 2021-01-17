@@ -44,3 +44,4 @@ example but might want to try this code on something*/
   }
     const button = document.querySlectorAll('button');
     button.forEach(button => button.click()) */
+   

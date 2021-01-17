@@ -16,13 +16,15 @@ class App extends React.Component {
         
     handleSubmit = (event)=>{
         event.preventDefault()
+        
+
     
     
     
     const newItem = {
         item: this.state.item,
         brand: this.state.brand,
-        units: units,
+        units: this.state.units,
         quantity: 0,
         isPurchased: false
 
@@ -122,7 +124,7 @@ const groceries = [
     }
 ]
 
-ReactDOM.render(<App/>, document.querySelector('.container'))
+ReactDOM.render(<App/>, document.querySelector(".container"))
 
 
 
