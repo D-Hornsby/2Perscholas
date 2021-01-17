@@ -1,6 +1,17 @@
+
+//changed from handleChange to itemChange trying to fix. it did nothing. 
+//i took out the first grocerie: on line 8...no change
+//i changed soda to true so it didnt stay in my list box
+//i added the map inside ul tags
+//now my items work but my brand units and quantity still do not. 
+//changed units in render to look like others and it didnt matter stayed the same
+//i voied i wanted my imput boxes to line up so it was suggested i do div 1 and div 2 to fix
+//div change did some things...so i changed it back for now but noted ...
+
+
 class App extends React.Component {
     state = {
-        groceries: groceries,
+        groceries,
 
         item:'',
         brand:'',
@@ -8,94 +19,106 @@ class App extends React.Component {
         quantity:''
         
     }
-    handleChange = (event) => {
-        console.log(this.state.value)
-        this.setState({[event.target.id]: event.target.value})
+    
+    itemChange = (event) => {
+        console.log(event.target.name)
+        // console.log(event.target.value)
+        this.setState({
+            [event.target.id]: event.target.value})
             
             }
         
-    handleSubmit = (event)=>{
+    submit = (event)=>{
         event.preventDefault()
-        
 
+        console.log('submit');
     
-    
-    
-    const newItem = {
+    const item = {
         item: this.state.item,
         brand: this.state.brand,
         units: this.state.units,
-        quantity: 0,
+        quantity: 1,
         isPurchased: false
 
 
 
     }
+
+    //taking item out of line 48 rebroke it. can i add them all
+    //yes but it made no change
         this.setState({
 
-                groceries : [ newItem, ...this.state.groceries ],
+                groceries : [ item, ...this.state.groceries ],
                 item:'',
                 brand:'',
-                units:''
+                units:'',
+                quantity:''
             }
-
         )
      }
 
     render() {
 
-        return (
-               
-        <div>
+        return ( <div>
                 
               <h2>Grocerie List</h2>
 
-            <form onSubmit= {this.handleSubmit}>
+            <form onSubmit= {this.submit}>
                 <lable htmlFor="item">Item</lable> 
-                <input 
+                <input id='item' 
                 type='text'
                 value = {this.state.item} 
-                onChange= {this.handleChange}  
-                id= 'item' 
-                item= ''
-
+                onChange= {this.itemChange}  
+                item= '' 
                 />
 
             <br />
 
             
                 <lable htmlFor="brand">Brand</lable>
-                <input
+                <input id='brand'
                 type='text' 
                 value = {this.state.brand}
-                onChange= {this.handleChange} 
-                id="brand" 
-
+                onChange= {this.itemChange} 
+                brand=''
+               
                 />
             <br />
 
                 <lable htmlFor="units" >Units</lable>
-                <input
-                type='text' 
-                value = {this.state.units}
-                onChange= {this.handleChange}
-                id="units"
-                />
+                <input id="units" onChange= {this.itemChange} type='text' 
+                value = {this.state.units}></input>
+                
+                
                 
             <br />
+
+            <lable htmlFor="quantity" >Quantity</lable>
+                <input id='quantity'
+                type='text' 
+                value = {this.state.units}
+                onChange= {this.itemChange}
+                item=''
+                />
+
+                <br />
+                
+
             <input type='submit'/>
             </form>
 
+            <div>
             <ul>
-                <div>
-                    <h2>Preview grocerie list:</h2>
-                    <h3>{this.state.item}</h3>
-                    <h3>{this.state.brand}</h3>
-                    <h3>{this.state.units}</h3>
-                </div>
-            </ul>
+            {
+                this.state.groceries.map((grocery)=>
+                !grocery.isPurchased?<li>{grocery.item}</li>: '')
+            }</ul>
+            
+
+               </div>
 
         </div>)
+        
     }
 
 }
@@ -108,14 +131,16 @@ const groceries = [
         brand: 'Sprite',
         units: '2 liters',
         quantity: 1,
-        isPurchased: false
-    }, {
+        isPurchased: true
+    },
+     {
         item: 'Chips',
         brand: 'Pringles',
         units: '3 oz',
         quantity: 1,
         isPurchased: true
-    }, {
+    },
+     {
         item: 'Cookies',
         brand: 'Thin Oreos',
         units: '16 oz',
