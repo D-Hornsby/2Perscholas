@@ -4,7 +4,7 @@
   margin: 1em;
   padding: 1em;
   font-family: 'Poppins', sans-serif;
-  background: #002966;
+  /* background: #002966; */
   text-align: center; 
 }
 
@@ -12,7 +12,7 @@
 div{
   margin: auto;
   width: 80%;
-  box-shadow: 0 0 8px dodgerblue;
+  box-shadow: 0 0 15px dodgerblue; 
   padding: 1em;
   background:#e6f5ff;
  
@@ -25,6 +25,9 @@ ul {
 
 #item{
   background:#ccebff;
+  
+  
+  
 }
 
 #brand{
@@ -37,5 +40,23 @@ ul {
 
 #quantity{
   background: #ccebff;
+
 }
+
+button{
+  width: 250px;
+  border-radius: 8%;
+  border:none;
+  padding: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.50), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #abecad;
+}
+button:active {
+  background-color: #d4f7d5;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
 

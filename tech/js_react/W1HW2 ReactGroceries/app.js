@@ -37,15 +37,15 @@ class App extends React.Component {
         item: this.state.item,
         brand: this.state.brand,
         units: this.state.units,
-        quantity: 1,
+        quantity: this.state.quantity,
         isPurchased: false
-
-
-
     }
 
-    //taking item out of line 48 rebroke it. can i add them all
+    
+
+    //taking item out of line 'groceries' rebroke it. can i add them all
     //yes but it made no change
+
         this.setState({
 
                 groceries : [ item, ...this.state.groceries ],
@@ -57,6 +57,8 @@ class App extends React.Component {
         )
      }
 
+
+
     render() {
 
         return ( <div>
@@ -64,54 +66,77 @@ class App extends React.Component {
               <h2>Grocerie List</h2>
 
             <form onSubmit= {this.submit}>
-                <lable htmlFor="item">Item</lable> 
+            
+      
+                <lable htmlFor="item"></lable> 
                 <input id='item' 
+
                 type='text'
                 value = {this.state.item} 
                 onChange= {this.itemChange}  
+                placeholder= 'ITEM'
                 item= '' 
                 />
 
             <br />
 
             
-                <lable htmlFor="brand">Brand</lable>
+                <label htmlFor="brand"></label>
                 <input id='brand'
                 type='text' 
                 value = {this.state.brand}
                 onChange= {this.itemChange} 
                 brand=''
+                placeholder= 'BRAND'
                
                 />
             <br />
-
-                <lable htmlFor="units" >Units</lable>
+                
+                <label htmlFor="units" ></label>
                 <input id="units" onChange= {this.itemChange} type='text' 
+                placeholder='UNITS'
                 value = {this.state.units}></input>
                 
                 
                 
             <br />
 
-            <lable htmlFor="quantity" >Quantity</lable>
+            <label htmlFor="quantity" ></label>
                 <input id='quantity'
                 type='text' 
-                value = {this.state.units}
+                value = {this.state.quantity}
                 onChange= {this.itemChange}
                 item=''
+                placeholder='QUANTITY'
                 />
 
                 <br />
+                <br/>
                 
 
-            <input type='submit'/>
+            {/* <input type='submit'/> */}
+            <button>Add to List</button>
+            <br/>
+            <button>Reset</button>
+            <br/>
+            <br/>
+
+            {/* <input type="reset" value="Reset"></input> */}
+
             </form>
 
             <div>
             <ul>
             {
                 this.state.groceries.map((grocery)=>
-                !grocery.isPurchased?<li>{grocery.item}</li>: '')
+                !grocery.isPurchased?<li> 
+                    {grocery.item}
+                <ul>{grocery.brand}</ul>
+                <ul>{grocery.units}</ul>
+                <ul>{grocery.quantity}</ul>
+                
+                </li>: '')//maybe here
+                
             }</ul>
             
 
@@ -148,6 +173,13 @@ const groceries = [
         isPurchased: true
     }
 ]
+
+
+
+  
+   
+
+
 
 ReactDOM.render(<App/>, document.querySelector(".container"))
 
