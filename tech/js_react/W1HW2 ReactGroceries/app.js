@@ -30,6 +30,7 @@ class App extends React.Component {
         
     submit = (event)=>{
         event.preventDefault()
+        // thid.setState?
 
         console.log('submit');
     
