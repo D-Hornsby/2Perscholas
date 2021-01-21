@@ -52,8 +52,14 @@ class DivThree extends React.Component {
 class DivFour extends React.Component {
     render() {
         return (<div>
+            <div>
+            <h3>{this.props.datta}</h3></div>
+            <div>
             <h3>{this.props.datta}</h3>
+            </div>
+        
         </div>)
+        
     }
 }
 ReactDOM.render(<App/>, document.querySelector('#container'));
