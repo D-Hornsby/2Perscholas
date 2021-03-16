@@ -3,14 +3,14 @@
 // //what in the world is it and how do i get rid of it
 // //line 34 console.log not working
 // // when the document is loaded, trigger the "documentLoaded" function
-// window.addEventListener('DOMContentLoaded', documentLoaded, false);
+ window.addEventListener('DOMContentLoaded', documentLoaded, false);
 
-// var startTime;
-// var limite;
-// var temporizador;
+ var startTime;
+ var limite;
+ var temporizador;
 
-// function documentLoaded() {
-//   "use strict";
+ function documentLoaded() {
+   "use strict";
 
 //   // listen for mouse clicks on the button
 //  //what was given
@@ -96,5 +96,5 @@ function updateTime() {
 
  document.getElementById("clock").classList.remove("red");
   }
-}
+
 

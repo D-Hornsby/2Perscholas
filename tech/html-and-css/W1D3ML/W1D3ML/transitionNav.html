@@ -5,47 +5,202 @@
   <head>
   <title>Week 1 Day 3 Morning lab</title>
 
-
-
-    <div translate="no">
-        <div id= "child1">  </div> <br>
-        <div id= "child2">  </div>
-
   </head>
 
-    <style>
 
-      #child1 {
-          display:flex;
+  <!-- I added child 3 and 4 to get them to link up
+  and follow each other. It is not complete yet but are set
+  up as partners. 1 and 2 then 3 and 4 for now.  -->
+<body>
+    <div id="parent">
+
+        <div id= "child1">  </div> 
+        <br/>
+        <div id= "child2">  </div>
+        <br/>
+        <div id= "child3">  </div> 
+        <br/>
+        <div id= "child4">  </div>
+
+    </div>
+
+ 
+
+    <style>
+      
+      
+      #parent {
+              background-color: rgb(7, 75, 134);
+              padding: 10%;
+              display:flex;
+              flex-direction: column;  
+      }
+
+       #child1 {
+              display:flex; 
+              height: 100px;
+              width: 100px;
+              border-radius: 100px;
+              background-color: rgb(5, 91, 91);
+              transition: 1s; 
+              transition: width 2s ease-in-out 0s; 
+              Padding: 0 5px;
+              box-shadow: 0px 20px 30px 2px; 
+
+} 
+ 
+    /* #child1:hover {
+        width: 99%;
+
+} */
+
+       #child2 {
+            display:flex; 
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+            background-color:teal;
+            transition: 1s; 
+            transition: width 2s ease-in-out 0s; 
+            Padding: 0 5px;
+            box-shadow: 0px 20px 30px 2px; 
+
+} 
+    /* #child2:hover {
+        width: 99%;
+
+} */
+
+
+      #child1:hover {
+            transition: width 1s;
+            animation-name: follow;
+            animation-duration: 1s;
+            animation-fill-mode: forwards; 
+      }
+
+      #child1:hover ~ #child2 {
+            animation-delay: 1s;
+            transition: width 1s;
+            animation-name: follow;
+            animation-duration: 1s;
+            animation-fill-mode: forwards; 
+      }
+
+      #child1:not(:hover) {
+            transition: width 1s;
+            animation-name: resetting;
+            animation-duration: 1s;
+            animation-fill-mode: backwards; 
+      }
+
+      #child1:not(:hover) ~ #child2 {
+            animation-delay: 1s;
+            transition: width 1s;
+            animation-name: resetting;
+            animation-duration: 1s;
+            animation-fill-mode: backwards; 
+      }
+
+      #child3 {
+            display:flex; 
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+            background-color: rgb(55, 196, 191);
+          
+            /* transition: width 2s ease-in-out 0s;  */
+            Padding: 0 5px;
+            box-shadow: 0px 20px 30px 2px; 
+
+  } 
+     #child3:hover {
+          width: 99%;
+    
+          transition: width 2s ease-in-out 0s;  
+    
+          animation-name: follow;
+          animation-duration: 1s;
+          animation-fill-mode: forwards; 
+
+    } 
+
+
+
+    #child4 {
+
+          display:flex; 
           height: 100px;
           width: 100px;
           border-radius: 100px;
-          background-color: teal;
-          transition: width 2s ease-in-out 0s;
+          background-color: rgb(145, 247, 244);
+        
+          transition: width 2s ease-in-out 0s; 
           Padding: 0 5px;
-          box-shadow: 0 10px 40px 10; /*why is this not working*/
+          box-shadow: 0px 20px 30px 2px; 
 
-}    #child1:hover {
+          animation-name: follow;
+          animation-duration: 1s;
+          
+
+  } 
+
+    #child3:hover ~ #child4 {
+          animation-delay: 1s;
+          transition: width 1s;
+          animation-name: follow;
+          animation-duration: 1s;
+          animation-fill-mode: forwards; 
+    }
+
+    #child3:not(:hover) {
+          transition: width 1s;
+          animation-name: resetting;
+          animation-duration: 1s;
+          animation-fill-mode: backwards;
+    } 
+
+    #child3:not(:hover) ~ #child4 {
+          animation-delay: 1s;
+          transition: width 1s;
+          animation-name: resetting;
+          animation-duration: 1s;
+          animation-fill-mode: backwards; 
+    }
+
+
+
+
+    #child4:hover {
+
         width: 99%;
 
+  }  
+
+/* 11 def has the smoothest resetting so it dont make the 
+bubble bounce or hesitate to go back 
+and 99% keeps it from running of the page on the right*/
+
+@keyframes follow {
+  from {
+    width: 11%;
+  }
+  to {
+    width: 99%;
+  }
 }
-      #child2 {
-        display:flex;
-        height: 100px;
-        width: 100px;
-        border-radius: 100px;
-        background-color: teal;
-        transition: width 2s ease-in-out 0s;
-        Padding: 0 5px;
-        box-shadow: 0 10px 40px 10; /*why is this not working*/
 
-
-
-}    #child2:hover {
-        width: 99%;
-
-
+@keyframes resetting {
+  from {
+    width: 99%;
+  }
+  to {
+    width: 11%;
+  }
 }
+
+
 </style>
+</body>
 
 </html>

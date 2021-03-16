@@ -1,7 +1,7 @@
 class App extends React.Component{
 
     state = {
-        score: 0,
+        score: '',
         cataglory: '',
         points: 100, 
         clue: '',

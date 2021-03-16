@@ -5,25 +5,39 @@
 
     <title>timer</title>
 
-    <link href="timer.css"rel="stylesheet">
-
-     <script src="timer.js"></script>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Countdown</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="scripts.js" async defer></script>
+    
 
   </head>
   <body>
 
-    <div id="controlos">
+    <div id="controls">
+      <button id="btnStart">Start</button>
+      <br>
+      <input id="txtTime" type="text" value="10" size="4" maxlength="4">
+      <br>
+      
+  </div>
+  <div id="timer" class="blue">00:00</div>
+
+    <!-- <div id="controlos">
       <input id="txtTempo"
       type="text"
       value="10"
       size="4"
       maxlength="4">
       <button id="btnStart"onclick="startTimer('seconds','minutes','timeInput');">Start</button>
-    </div>
+    </div> -->
 
-    <div id="clock" class="blue">
+    <!-- <div id="clock" class="blue"> -->
       <!--im adding this for 5 with help but my clock dont work from 4 -->
-      <input id="txtTempo"
+      <!-- <input id="txtTempo"
       value="00"
       size="3"
       onclick="startTimer">:
@@ -34,7 +48,7 @@
       onclick="startTimer">
 
 
-    </div>
+    </div> -->
 
 
 

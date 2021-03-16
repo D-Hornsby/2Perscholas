@@ -118,6 +118,7 @@ class App extends React.Component {
             {/* <input type='submit'/> */}
             <button>Add to List</button>
             <br/>
+            <br/>
             <button>Reset</button>
             <br/>
             <br/>

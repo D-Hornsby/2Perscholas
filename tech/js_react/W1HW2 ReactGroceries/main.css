@@ -44,16 +44,17 @@ ul {
 }
 
 button{
-  width: 250px;
-  border-radius: 8%;
+  width: 175px;
+  border-radius: 7%;
   border:none;
+  color: white;
   padding: 5px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.50), 0 6px 20px 0 rgba(0,0,0,0.19);
-  background-color: #abecad;
+  background-color: #3a85db;
 }
 button:active {
-  background-color: #d4f7d5;
-  box-shadow: 0 5px #666;
+  background-color: #4e7596;
+  box-shadow: 0 5px rgb(102, 102, 102);
   transform: translateY(4px);
 }
 
