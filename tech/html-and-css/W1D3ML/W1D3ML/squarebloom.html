@@ -7,25 +7,52 @@
 
 <div id= "main">
 
-  <div class="topleft"></div>
-  <div class="topright"></div>
-  <div class="bottomleft"></div>
-  <div class="bottomright"></div>
+  <span style="font-size: 48px; color: Mediumslateblue;">
+    <i class="fas star"></i>
+  </span>
+
+    <div>
+      <div class="bloom" id = "topleft"></div>
+      <div class="bloom" id = "topright"></div>
+    </div>
+    <div>
+      <div class="bloom" id = "bottomleft"></div>
+      <div class="bloom" id = "bottomright"></div>
+    </div>
 </div>
 
 </head>
 
   <style>
-
-
-div#main {
-  position: relative;
-  height: 200px;
-  width: 200px;
-  margin: auto;
+/* the height vh moved it verticaly centered */
+body {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background-color:rgb(120, 75, 30);
+  height: 50vh;
 }
 
-div#main .topleft {
+#main {
+  display: flex;
+  position: relative;
+ 
+  width: 200px;
+  background-color: seagreen;
+  
+}
+span{
+  position: absolute;
+  margin: 90px;
+}
+.bloom {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transition: 1s transform;
+}
+
+#topleft {
   position: absolute;
   display: inline-block;
   width: 100px;
@@ -33,10 +60,10 @@ div#main .topleft {
   top: 0px;
   left: 0px;
   background: #ff3300;
-  transform-origin: center;
-  transform: translate(-100%, 50%) rotate (45deg);
+  transform-origin: left top;
+  /* transform: translate(-100%, 50%) rotate (45deg); */
 }
-div#main .topright {
+#topright {
   position: absolute;
   display: inline-block;
   width: 100px;
@@ -44,9 +71,11 @@ div#main .topright {
   top: 0px;
   left: 100px;
   background: #cc6600;
-  transform-origin: center;
+  transform-origin: right top;
+  /* transform: translate(-100%, 50%) rotate (45deg); */
+
 }
-div#main .bottomleft {
+ #bottomleft {
   position: absolute;
   display: inline-block;
   width: 100px;
@@ -54,9 +83,9 @@ div#main .bottomleft {
   top: 100px;
   left: 0px;
   background: #ff9933;
-  transform-origin: center;
+  transform-origin:left bottom;
 }
-div#main .bottomright {
+ #bottomright {
   position: absolute;
   display: inline-block;
   width: 100px;
@@ -64,16 +93,20 @@ div#main .bottomright {
   top: 100px;
   left: 100px;
   background: #ff6600;
-  transform-origin: center;
+  transform-origin: right bottom;
 }
-div#main: hover .topleft{
 
+#main:hover #topleft{
+  transform: rotate(90deg);
 }
-div#main: hover .topright{
+#main:hover #topright{
+  transform: rotate(-90deg);
 }
-div#main: hover .bottomleft{
+#main:hover #bottomleft{
+  transform: rotate(-90deg);
 }
-div#main: hover .bottomright{
+#main:hover #bottomright{
+  transform: rotate(90deg);
 }
 
 
